@@ -1,0 +1,79 @@
+{
+  "name": "auto-blogger",
+  "version": "2.1.0",
+  "description": "🚀 AI-Powered WordPress Automation Tool with OpenAI & Gemini Integration, Getty Images, SEO Optimization, and Auto-Updates",
+  "main": "autoblog_launcher.py",
+  "scripts": {
+    "start": "python autoblog_launcher.py",
+    "install": "bash install.sh",
+    "test": "python -m pytest tests/",
+    "lint": "flake8 *.py",
+    "format": "black *.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AryanVBW/AUTO-blogger.git"
+  },
+  "keywords": [
+    "wordpress",
+    "automation",
+    "ai",
+    "openai",
+    "gemini",
+    "getty-images",
+    "seo",
+    "blog",
+    "content-generation",
+    "python",
+    "gui",
+    "multi-domain",
+    "auto-update",
+    "wordpress-tool",
+    "content-management",
+    "blogging",
+    "artificial-intelligence",
+    "seo-optimization",
+    "wordpress-automation",
+    "content-creation",
+    "dalle",
+    "yoast",
+    "aioseo"
+  ],
+  "author": {
+    "name": "AryanVBW",
+    "email": "AryanVBW@gmail.com",
+    "url": "https://github.com/AryanVBW"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AryanVBW/AUTO-blogger/issues"
+  },
+  "homepage": "https://aryanvbw.github.io/AUTO-blogger/website/",
+  "engines": {
+    "python": ">=3.8"
+  },
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/AryanVBW"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "files": [
+    "*.py",
+    "configs/",
+    "docs/",
+    "scripts/",
+    "website/",
+    "requirements.txt",
+    "install.sh",
+    "README.md",
+    "LICENSE"
+  ]
+}

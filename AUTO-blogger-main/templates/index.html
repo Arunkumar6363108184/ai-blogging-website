@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Blogging Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            padding: 40px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        textarea {
+            width: 100%;
+            height: 120px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        pre {
+            white-space: pre-wrap;
+            background: #f0f0f0;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>📝 AI-Powered Blogging Website</h2>
+
+    <textarea id="topic" placeholder="Enter blog topic..."></textarea>
+    <br>
+    <button onclick="generate()">Generate Blog</button>
+
+    <pre id="output"></pre>
+</div>
+
+<script>
+function generate() {
+    const topic = document.getElementById("topic").value;
+    const output = document.getElementById("output");
+
+    output.innerText = "Generating blog... Please wait ⏳";
+
+    fetch("/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ topic })
+    })
+    .then(res => res.json())
+    .then(data => output.innerText = data.blog)
+    .catch(err => output.innerText = "Error: " + err);
+}
+</script>
+
+</body>
+</html>
+
+    .catch(err => {
+        output.innerText = "Backend error:\n" + err.message;
+    });
+}
+</script>
+
+
+
+</body>
+</html>
